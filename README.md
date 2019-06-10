@@ -8,12 +8,20 @@ They use the Gradient Descent Algorithm with Supervised Learning.
 They are based on the Machine Learning Course imparted by Andrew Ng, but they have been redesigned to fit my goals, which is to create a tool using ML for predicting the outcome of a Professional Match that will be played by any two Professinal Dota 2 Teams.
 
 The first Script Dota2WinProbability-TrainGradientDescent is the Training script algorithm in which the data fed consistes of two text files:
-	1 - DataTrain-Teams.txt contains the teams that have already played against each other, the teams names have been swapped by numbers in order for the script to read the data easily (You can find the numbers for all the teams in TeamsListNames&Numbers.txt), the nomenclature used in the file is:
-		(First team number),(Second team number)
-	2 - DataTrain-Result.txt contains the result for all the matches that were played, the nomclature is: 
-		1 = Win, 0 = Lose
+	
+	1.- DataTrain-Teams.txt contains the teams that have already played against each other, the teams names have been swapped by numbers in order for the script to read the data easily (You can find the numbers for all the teams in TeamsListNames&Numbers.txt), the nomenclature used in the file is:
+			
+			(First team number),(Second team number)
+	
+	2.- DataTrain-Result.txt contains the result for all the matches that were played, the nomclature is: 
+			
+			1 = Win, 0 = Lose
 
-The equation use for training the ML is f(x) = 1 + x + y + sqrt(xy) + x^2 + y^2 + xy + ysqrt(x), with the current data it has a 65% accuracy
+The equation use for training the ML is:
+		
+		f(x) = 1 + x + y + sqrt(xy) + x^2 + y^2 + xy + ysqrt(x)
+
+With the current data it has a 65% accuracy
 
 The second Script Dota2WinProbability-TestGradientDescent is used for testing wether the training was succesful to our own terms of course, it has the theta values defined in the variable theta, it performs the accuracy test with the current values and plots the result for better visual inspection, it then prints the Train accuracy in the command line.
 
